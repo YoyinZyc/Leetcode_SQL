@@ -1,0 +1,5 @@
+# Write your MySQL query statement below
+select Email
+from Person
+group by Email
+having Email in (select a.email from Person a, Person b where a.Email = b.Email and a.ID != b.Id)
